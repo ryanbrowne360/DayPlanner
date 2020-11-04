@@ -52,7 +52,8 @@ function initializeAgenda() {
     };
 };
 
-function agendaSet() {
+function agendaSet(event) {
+    console.log("I am being clicked!")
     event.preventDefault();
 
     var textEl = $("<p>");
@@ -68,9 +69,12 @@ function agendaSet() {
             localStorage.setItem("agendaItems", JSON.stringify(agendaItems));
             $(".agenda-text").text(agendaItems);
             $(".agenda-text").html(agendaItems[i]);
+            console.log("agendaitems: ", agendaitems)
         }
     } else return;
 };
 
-$("button").on("click", agendaSet());
+$("button").on("click", agendaSet);
+
+
 
