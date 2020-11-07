@@ -1,80 +1,54 @@
-var now = moment();
+//Setting the current date and time using moment.js
 
-var currentDayDisplay = now.format("[Today is:] dddd, MMMM, Do YYYY");
+var Day = moment();
+var exactTime = moment().format("h:mm a");
+var currentDayDisplay = Day.format("[Today is:] dddd, MMMM, Do YYYY");
+
+//Displaying the current date and time in the html
 
 $("#currentDay").text(currentDayDisplay);
+$("#currentDay").text(exactTime);
 
-var currentHour = now.hours();
 
-var agendaItems = [];
+//Setting the colour of the task based on relative time of day
 
-var nine = now.hour(9).format("hA");
-$("#slot-9").text(nine);
-var ten = now.hour(10).format("hA");
-$("#slot-10").text(ten);
-var eleven = now.hour(11).format("hA");
-$("#slot-11").text(eleven);
-var twelve = now.hour(12).format("hA");
-$("#slot-12").text(twelve);
-var one = now.hour(13).format("hA");
-$("#slot-13").text(one);
-var two = now.hour(14).format("hA");
-$("#slot-14").text(two);
-var three = now.hour(15).format("hA");
-$("#slot-15").text(three);
-var four = now.hour(16).format("hA");
-$("#slot-16").text(four);
-var five = now.hour(17).format("hA");
-$("#slot-17").text(five);
-
-initializeAgenda();
-
-function initializeAgenda() {
-
-    $("div .hour").each(function () {
-        var hourChoices = parseInt($(this).attr("id").split("-")[1]);
-        if (hourChoices < currentHour) {
-            $(this).addClass("past");
-            $(this).removeClass("present", "future");
-        } else if (hourChoices === currentHour) {
-            $(this).addClass("present");
-            $(this).removeClass("past", "future");
-        } else {
-            $(this).addClass("future");
-            $(this).removeClass("past", "present");
-        };
-    })
-
-    var storedAgendaItems = JSON.parse(localStorage.getItem("agendaItems"));
-
-    if (storedAgendaItems !== "") {
-        agendaItems = storedAgendaItems;
-    };
-};
-
-function agendaSet(event) {
-    console.log("I am being clicked!")
-    event.preventDefault();
-
-    var textEl = $("<p>");
-    textEl.text(inputAgenda);
-    $(".agenda-text").append(textEl);
-
-    if (inputAgenda !== "") {
-        for (var i = 0; i < agendaItems.length; i++) {
-            var inputAgenda = $(".agenda").val();
-
-            agendaItems.push(inputAgenda);
-
-            localStorage.setItem("agendaItems", JSON.stringify(agendaItems));
-            $(".agenda-text").text(agendaItems);
-            $(".agenda-text").html(agendaItems[i]);
-            console.log("agendaitems: ", agendaitems)
+function taskColour() {
+    for ( var i=9; i<18; i++) {
+        var time = i
+        if (time == moment().format('H')) {
+            $("#time"+ i).addClass("present").removeClass("past", )
         }
-    } else return;
-};
+        if (time < moment().format('H')) {
+            $("#time"+ i).addClass("past")
+        }
+        if (time > moment().format('H')) {
+            $("#time"+ i).addClass("future")
+        }
+    }
+}
+taskColour();
 
-$("button").on("click", agendaSet);
+//Saving the users input content about their tasks in local storage
+
+$("#S1").on("click", () => localStorage.text1 = $("#text9").val())
+$("#S2").on("click", () => localStorage.text2 = $("#text10").val())
+$("#S3").on("click", () => localStorage.text3 = $("#text11").val())
+$("#S4").on("click", () => localStorage.text4 = $("#text12").val())
+$("#S5").on("click", () => localStorage.text5 = $("#text13").val())
+$("#S6").on("click", () => localStorage.text6 = $("#text14").val())
+$("#S7").on("click", () => localStorage.text7 = $("#text15").val())
+$("#S8").on("click", () => localStorage.text8 = $("#text16").val())
+$("#S9").on("click", () => localStorage.text9 = $("#text17").val())
+
+
+//Display previously closed tasks
+
+    function Saved() {
+        for (let i=1; i<11; i++)
+        $("#text"+ i).val(localStorage.getItem("text"+ i))
+    }
+    Saved()
+
 
 
 

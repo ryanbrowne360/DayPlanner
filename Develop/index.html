@@ -27,6 +27,7 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentTime"></p>
     </header>
 
     <div class="container">
@@ -35,16 +36,16 @@
       <div class="time-block">
         <div class="row">
 
-          <div class="col-2 hour" id="slot-9">
-            <p class="display-time"></p>
+          <div class="col-2 hour" id="T9">
+            <p class="display-time">9</p>
           </div>
 
           <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
+            <textarea class="agenda" id="text9"></textarea>
           </div>
 
           <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
+            <button type="button" class="btn saveIcon" id="S1"><i class="far fa-save"></i></button>
           </div>
         </div>
       </div>
@@ -52,30 +53,14 @@
       <div class="time-block">
         <div class="row">
 
-          <div class="col-2 hour" id="slot-10">
-            <p class="display-time"></p>
+          <div class="col-2 hour" id="T10">
+            <p class="display-time">10</p>
           </div>
           <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
+            <textarea class="agenda" id="text10"></textarea>
           </div>
           <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="time-block">
-        <div class="row">
-
-          <div class="col-2 hour" id="slot-11">
-            <p class="display-time"></p>
-          </div>
-          <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
-          </div>
-          <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
+            <button type="button" class="btn saveIcon" id="S2"><i class="far fa-save"></i></button>
           </div>
 
         </div>
@@ -84,14 +69,14 @@
       <div class="time-block">
         <div class="row">
 
-          <div class="col-2 hour" id="slot-12">
-            <p class="display-time"></p>
+          <div class="col-2 hour" id="T11">
+            <p class="display-time">11</p>
           </div>
           <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
+            <textarea class="agenda" id="text11"></textarea>
           </div>
           <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
+            <button type="button" class="btn saveIcon" id="S3"><i class="far fa-save"></i></button>
           </div>
 
         </div>
@@ -100,14 +85,14 @@
       <div class="time-block">
         <div class="row">
 
-          <div class="col-2 hour" id="slot-13">
-            <p class="display-time"></p>
+          <div class="col-2 hour" id="T12">
+            <p class="display-time">12</p>
           </div>
           <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
+            <textarea class="agenda" id="text12"></textarea>
           </div>
           <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
+            <button type="button" class="btn saveIcon" id="S4"><i class="far fa-save"></i></button>
           </div>
 
         </div>
@@ -116,14 +101,14 @@
       <div class="time-block">
         <div class="row">
 
-          <div class="col-2 hour" id="slot-14">
-            <p class="display-time"></p>
+          <div class="col-2 hour" id="T1">
+            <p class="display-time">1</p>
           </div>
           <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
+            <textarea class="agenda" id="text13"></textarea>
           </div>
           <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
+            <button type="button" class="btn saveIcon" id="S5"><i class="far fa-save"></i></button>
           </div>
 
         </div>
@@ -132,14 +117,14 @@
       <div class="time-block">
         <div class="row">
 
-          <div class="col-2 hour" id="slot-15">
-            <p class="display-time"></p>
+          <div class="col-2 hour" id="T2">
+            <p class="display-time">2</p>
           </div>
           <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
+            <textarea class="agenda" id="text14"></textarea>
           </div>
           <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
+            <button type="button" class="btn saveIcon" id="S6"><i class="far fa-save"></i></button>
           </div>
 
         </div>
@@ -148,14 +133,14 @@
       <div class="time-block">
         <div class="row">
 
-          <div class="col-2 hour" id="slot-16">
-            <p class="display-time"></p>
+          <div class="col-2 hour" id="T3">
+            <p class="display-time">3</p>
           </div>
           <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
+            <textarea class="agenda" id="text15"></textarea>
           </div>
           <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
+            <button type="button" class="btn saveIcon" id="S7"><i class="far fa-save"></i></button>
           </div>
 
         </div>
@@ -164,14 +149,30 @@
       <div class="time-block">
         <div class="row">
 
-          <div class="col-2 hour" id="slot-17">
-            <p class="display-time"></p>
+          <div class="col-2 hour" id="T4">
+            <p class="display-time">4</p>
           </div>
           <div class="col-9 agenda-text">
-            <textarea class="agenda"></textarea>
+            <textarea class="agenda" id="text16"></textarea>
           </div>
           <div class="col-1 saveBtn">
-            <button type="button" class="btn saveIcon"><i class="far fa-save"></i></button>
+            <button type="button" class="btn saveIcon" id="S8"><i class="far fa-save"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="time-block">
+        <div class="row">
+
+          <div class="col-2 hour" id="T5">
+            <p class="display-time">5</p>
+          </div>
+          <div class="col-9 agenda-text">
+            <textarea class="agenda" id="text17"></textarea>
+          </div>
+          <div class="col-1 saveBtn">
+            <button type="button" class="btn saveIcon" id="S9"><i class="far fa-save"></i></button>
           </div>
 
         </div>
