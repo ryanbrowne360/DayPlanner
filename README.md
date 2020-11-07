@@ -18,10 +18,10 @@ Time blocks are clearly visible just like any other digital or paper planner. Wh
 
 - *Google Chrome*
 - *JavaScript*
-- *JQuery
+- *JQuery*
 - *HTML*
 - *CSS*
-- *Moment.js library"
+- *Moment.js library*
 - *Ryan Browne Software Developer* [Ryan Browne](https://github.com/ryanbrowne360/)
 
 References:
