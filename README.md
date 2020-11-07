@@ -18,6 +18,7 @@ Time blocks are clearly visible just like any other digital or paper planner. Wh
 
 - *Google Chrome*
 - *JavaScript*
+- *JQuery
 - *HTML*
 - *CSS*
 - *Moment.js library"
@@ -28,6 +29,7 @@ References:
 - [w3schools](https://www.w3schools.com/)
 - [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
 - [Moment.js Documentation](https://momentjs.com/docs/)
+- [JQuery Documentation](https://api.jquery.com/)
 
 License:
 
